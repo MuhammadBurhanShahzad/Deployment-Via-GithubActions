@@ -1,0 +1,169 @@
+/* General Body Styles */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #0d0d0d;
+    color: #fff;
+    scroll-behavior: smooth;
+}
+
+/* Header & Navigation */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 2rem;
+    background-color: #000;
+    border-bottom: 2px solid #ff0000;
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
+.logo {
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ff0000;
+}
+
+.main-nav ul {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+    margin: 0;
+    padding: 0;
+}
+
+.main-nav a {
+    color: #fff;
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.main-nav a:hover {
+    color: #ff0000;
+}
+
+/* Hero Section */
+/* Container for the new YouTube embed */
+.hero-video-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    overflow: hidden;
+    z-index: -1; /* This sends the video to the background */
+    pointer-events: none; /* Prevents user from interacting with the iframe */
+}
+
+.hero-video-container iframe {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transform: scale(1.2); /* Zooms in slightly to cover all edges without distortion */
+    filter: brightness(50%); /* Darkens the video */
+}
+
+/* Ensure the hero section is positioned correctly */
+.hero-section {
+    position: relative;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    overflow: hidden;
+}
+.hero-content h1 {
+    font-size: 4rem;
+    margin-bottom: 0.5rem;
+    text-shadow: 2px 2px 4px #000;
+}
+
+.hero-content p {
+    font-size: 1.5rem;
+    margin-bottom: 2rem;
+    text-shadow: 1px 1px 2px #000;
+}
+
+.cta-button {
+    padding: 1rem 2.5rem;
+    background-color: #ff0000;
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    font-size: 1.2rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.cta-button:hover {
+    background-color: #cc0000;
+}
+
+/* Updates & Fighters Sections */
+section {
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+h2 {
+    font-size: 2.5rem;
+    color: #ff0000;
+    margin-bottom: 2rem;
+}
+
+.update-cards-container,
+.fighter-gallery {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 2rem;
+}
+
+.update-card,
+.fighter-card {
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+    transition: transform 0.3s ease;
+    max-width: 300px;
+}
+
+.update-card:hover,
+.fighter-card:hover {
+    transform: translateY(-10px);
+}
+
+.update-card img,
+.fighter-card img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.update-card h3,
+.fighter-card h3 {
+    margin: 1rem 0 0.5rem;
+    color: #fff;
+}
+
+.update-card p,
+.fighter-card p {
+    padding: 0 1rem 1rem;
+    color: #ccc;
+    font-size: 0.9rem;
+}
+
+/* Footer */
+.main-footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: #000;
+    border-top: 2px solid #ff0000;
+}
